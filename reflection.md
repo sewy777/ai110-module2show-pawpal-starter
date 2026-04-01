@@ -2,10 +2,21 @@
 
 ## 1. System Design
 
+### Three Core User Actions
+
+1. **Add a pet** — enter a pet's name, species, and age into the system
+2. **Schedule a task** — add a care task (like "Morning Walk at 08:00") to a specific pet
+3. **See today's schedule** — view all tasks sorted by time across all pets
+
+---
+
 **a. Initial design**
 
-- Briefly describe your initial UML design.
-- What classes did you include, and what responsibilities did you assign to each?
+I went with four classes: Task, Pet, Owner, and Scheduler.
+
+Task holds all the info about one care activity — what it is, when it happens, how long it takes, how often it repeats, and how important it is. Pet represents one animal and keeps a list of its tasks. Owner is the person using the app — they have a list of pets and can pull together all the tasks from every pet. Scheduler is the brain that does the actual organizing — sorting tasks by time, filtering them, and checking if two things are scheduled at the same time.
+
+I used Python dataclasses for Task and Pet since they're mostly just data containers, which keeps the code clean.
 
 **b. Design changes**
 
