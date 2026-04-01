@@ -85,7 +85,9 @@ The conflict detection only flags tasks scheduled at the exact same time (e.g., 
 
 **a. How you used AI**
 
-I used AI throughout the whole project — for brainstorming the class structure, generating the UML diagram, scaffolding the class skeletons, and drafting the test suite. The most helpful prompts were specific ones that referenced actual files, like asking Copilot to review `pawpal_system.py` and suggest what was missing. Asking about one thing at a time (e.g., "how should Scheduler retrieve tasks from Owner?") got better answers than broad questions.
+I used Copilot throughout the whole project in different ways depending on the task. Agent Mode was the most useful for bigger changes — like fleshing out the full class implementations and wiring the recurring task logic — because it could touch multiple parts of the code at once. Inline Chat was great for quick targeted questions, like asking how to use a lambda with `sorted()` for the time-based sorting. The Generate tests smart action gave me a solid starting point for the test suite that I then reviewed and adjusted.
+
+Using separate chat sessions for each phase really helped keep things organized. When I switched to a new session for testing in Phase 5, I wasn't carrying over all the implementation context from earlier phases, so the suggestions stayed focused on testing rather than mixing concerns. It also made it easier to start fresh with a specific goal instead of a cluttered conversation history.
 
 **b. Judgment and verification**
 
