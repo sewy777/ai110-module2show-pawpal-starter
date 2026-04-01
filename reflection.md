@@ -91,7 +91,7 @@ Using separate chat sessions for each phase really helped keep things organized.
 
 **b. Judgment and verification**
 
-At one point AI suggested a full rewrite of `app.py` to connect the backend. I pushed back on that because CodePath gave us the starter file for a reason — the structure was already there and we just needed to wire it up. I verified by going line by line through the original file and only replacing the placeholder logic, keeping everything else intact. That kept the project aligned with what was actually asked.
+At one point Copilot suggested a full rewrite of `app.py` to connect the backend. I pushed back on that because CodePath gave us the starter file for a reason — the structure was already there and we just needed to wire it up. I verified by going line by line through the original file and only replacing the placeholder logic, keeping everything else intact. That kept the project aligned with what was actually asked.
 
 ---
 
