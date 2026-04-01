@@ -64,8 +64,7 @@ classDiagram
 
 **b. Design changes**
 
-- Did your design change during implementation?
-- If yes, describe at least one change and why you made it.
+One thing I changed from the original UML was adding a `pet_name` attribute to the `Task` class. At first I didn't include it, but once I started implementing I realized the Scheduler needs to know which pet each task belongs to when it's pulling all tasks together across multiple pets. Without it there'd be no way to tell tasks apart by owner.
 
 ---
 

@@ -92,9 +92,9 @@ class Scheduler:
     def handle_recurring(self, task: Task):
         """Create the next occurrence of a recurring task after it's completed."""
         if task.frequency == "daily":
-            timedelta(days=1)
+            next_date = datetime.now() + timedelta(days=1)
         elif task.frequency == "weekly":
-            timedelta(weeks=1)
+            next_date = datetime.now() + timedelta(weeks=1)
         else:
             return None
 
