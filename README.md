@@ -32,6 +32,23 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+## Features
+
+- **Add pets and tasks** — enter owner info, add multiple pets, and schedule care tasks with a time, duration, priority, and frequency
+- **Sorting by time** — the daily schedule is always displayed in chronological order using a lambda sort on the `HH:MM` time field
+- **Filtering** — tasks can be filtered by pet name or completion status
+- **Conflict warnings** — the Scheduler flags any two tasks at the exact same time and displays a `st.warning` in the UI
+- **Recurring tasks** — marking a daily or weekly task complete automatically creates the next occurrence using Python's `timedelta`
+- **Automated tests** — pytest suite covers task completion, sorting, recurrence, and conflict detection
+
+---
+
+## 📸 Demo
+
+<a href="/course_images/ai110/pawpal_screenshot.png" target="_blank"><img src='/course_images/ai110/pawpal_screenshot.png' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
+
+---
+
 ## Testing PawPal+
 
 Run the test suite with:

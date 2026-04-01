@@ -72,6 +72,7 @@ frequency = st.selectbox("Frequency", ["once", "daily", "weekly"])
 
 if st.button("Add task"):
     existing_pet.add_task(Task(task_title, task_time, int(duration), frequency, priority))
+    st.success(f"Task '{task_title}' added to {pet_name}!")
 
 all_tasks = owner.get_all_tasks()
 if all_tasks:
@@ -83,7 +84,6 @@ else:
 st.divider()
 
 st.subheader("Build Schedule")
-st.caption("This button should call your scheduling logic once you implement it.")
 
 if st.button("Generate schedule"):
     scheduler = Scheduler(owner)
