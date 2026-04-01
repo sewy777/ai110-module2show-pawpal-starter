@@ -18,6 +18,50 @@ Task holds all the info about one care activity — what it is, when it happens,
 
 I used Python dataclasses for Task and Pet since they're mostly just data containers, which keeps the code clean.
 
+### UML Diagram (Mermaid.js)
+
+```mermaid
+classDiagram
+    class Task {
+        +str description
+        +str time
+        +int duration_minutes
+        +str frequency
+        +str priority
+        +str pet_name
+        +bool is_complete
+        +mark_complete()
+    }
+
+    class Pet {
+        +str name
+        +str species
+        +int age
+        +List tasks
+        +add_task(task)
+        +get_tasks()
+    }
+
+    class Owner {
+        +str name
+        +List pets
+        +add_pet(pet)
+        +get_all_tasks()
+    }
+
+    class Scheduler {
+        +Owner owner
+        +sort_by_time()
+        +filter_tasks(pet_name, status)
+        +detect_conflicts()
+        +handle_recurring(task)
+    }
+
+    Pet "1" --> "many" Task : has
+    Owner "1" --> "many" Pet : owns
+    Scheduler "1" --> "1" Owner : manages
+```
+
 **b. Design changes**
 
 - Did your design change during implementation?
