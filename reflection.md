@@ -77,8 +77,7 @@ One thing I changed from the original UML was adding a `pet_name` attribute to t
 
 **b. Tradeoffs**
 
-- Describe one tradeoff your scheduler makes.
-- Why is that tradeoff reasonable for this scenario?
+The conflict detection only flags tasks scheduled at the exact same time (e.g., both at "10:00"). It won't catch a 30-minute task at 10:00 overlapping with one that starts at 10:15. For a pet care app where tasks are short and spread throughout the day, exact-time matching is good enough and keeps the logic simple. Checking for overlapping durations would add a lot more complexity without much real benefit here.
 
 ---
 

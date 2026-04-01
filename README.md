@@ -32,6 +32,17 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+## Smarter Scheduling
+
+PawPal+ includes algorithmic logic to make scheduling more intelligent:
+
+- **Sorting by time** — tasks are automatically ordered chronologically using a lambda on the `HH:MM` time field
+- **Filtering** — tasks can be filtered by pet name or completion status
+- **Conflict detection** — the Scheduler flags any two tasks scheduled at the exact same time with a warning message
+- **Recurring tasks** — when a daily or weekly task is marked complete, the Scheduler automatically creates the next occurrence using Python's `timedelta`
+
+---
+
 ### Suggested workflow
 
 1. Read the scenario carefully and identify requirements and edge cases.

@@ -89,6 +89,12 @@ class Scheduler:
                 seen[task.time] = task.description
         return warnings
 
+    def mark_task_complete(self, task: Task):
+        """Mark a task complete and auto-schedule the next occurrence if it recurs."""
+        task.mark_complete()
+        if task.frequency in ("daily", "weekly"):
+            self.handle_recurring(task)
+
     def handle_recurring(self, task: Task):
         """Create the next occurrence of a recurring task after it's completed."""
         if task.frequency == "daily":
